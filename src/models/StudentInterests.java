@@ -2,6 +2,7 @@ package models;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 /*
@@ -12,6 +13,7 @@ import java.util.Scanner;
  */
 
 public class StudentInterests {
+    //private ArrayList<String>Interest;
     public static void main(String[] args) {
         Scanner key = new Scanner(System.in);//here the scanner is used
 
@@ -19,23 +21,17 @@ public class StudentInterests {
         ArrayList<String> unchartedInterests = new ArrayList<>();
         unchartedInterests.addAll(Arrays.asList("riding","movies","travelling"));
         StudentCard interestsOfStudent = new StudentCard("Harman","Kaur",67868,unchartedInterests);
-        StudentCard otherInterests =  new StudentCard("Sukhman","kaur",767868,unchartedInterests);
 
         //now the first name, last name, student id and interests are printed
         System.out.println("First Name:" + interestsOfStudent.getFirstName());
         System.out.println("last Name:"  + interestsOfStudent.getLastName());
         System.out.println("Student ID:" + interestsOfStudent.getStudentId());
         System.out.println("Interests:"  + interestsOfStudent.getInterests());
-
-        //otherStudent.setInterests("riding");//valid input
-        //otherStudent.setInterests("Dancing");//invalid input
-
-
-        System.out.printf("%s is a %s hobby with the value of %d  %n" ,interestsOfStudent,interestsOfStudent.getTheme()
-                ,interestsOfStudent.getFirstIndex(),interestsOfStudent.getLastName());
-
-        System.out.printf("%s is a %s hobby with the value of %d %n" ,otherInterests,otherInterests.getTheme()
-                ,otherInterests.getFirstIndex());
     }
-}
+
+
+
+
+    }
+
 

@@ -28,7 +28,7 @@ public class StudentCard {
         setLastName(lastName);
         setStudentId(studentId);
         setInterests(interests);
-        setCardImage();
+        setStudentImage();
     }
 
 
@@ -45,14 +45,14 @@ public class StudentCard {
             throw new IllegalArgumentException(firstName + "is not valid. chose from these"+ firstName);
     }
 
-    private void setCardImage()
+    private void setStudentImage()
     {
-        String filePath = String.format("images/%s_of_%s.png",firstName, lastName , studentId,interests);
-//      System.out.println(filePath);
+        String filePath = String.format("image/1_of_har.jpg",firstName, lastName , studentId,interests);
+        System.out.println(filePath);
         studentImage = new Image(filePath);
     }
 
-    public Image getCardImage() {
+    public Image getStudentImage() {
         return studentImage;
     }
 
@@ -101,26 +101,7 @@ public class StudentCard {
     }
 
     //here the theme for the interests are used where we get to know that interests are horrific or interesting
-    public String getTheme()
-    {
-        if(interests.equals("riding")|| interests.equals("skiing"))
-            return " horrific";
-        else
-            return "interesting";
-    }
 
-    //the index for the first name is get here
-    public int getFirstIndex()
-    {
-        //index of each interests
-        return getFirstName().indexOf(firstName) + 2;
-    }
-
-    //string method is used for the return the interests of the first name and of is used as concatenated
-    public String toString()
-    {
-        return interests +" " +"of" +" "+ firstName;
-    }
 }
 
 

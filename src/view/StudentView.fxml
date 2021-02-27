@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentViewController">
+<AnchorPane fx:id="scrollBar" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentViewController">
    <children>
       <GridPane layoutX="296.0" layoutY="47.0" prefHeight="134.0" prefWidth="267.0">
         <columnConstraints>
@@ -38,8 +38,20 @@
             <Label fx:id="studentIdLabel" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
          </children>
       </GridPane>
-      <TextArea layoutX="264.0" layoutY="200.0" prefHeight="163.0" prefWidth="253.0" />
-      <ScrollBar layoutX="500.0" layoutY="200.0" orientation="VERTICAL" prefHeight="163.0" prefWidth="14.0" />
-      <ImageView fitHeight="324.0" fitWidth="236.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageView" fitHeight="324.0" fitWidth="236.0" layoutX="14.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="favoriteActivitiesLabel" layoutX="300.0" layoutY="196.0" prefHeight="22.0" prefWidth="122.0" text="Favorite Activities">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ListView layoutX="296.0" layoutY="228.0" prefHeight="124.0" prefWidth="200.0" />
+      <Label layoutX="300.0" layoutY="227.0" text="riding" />
+      <Label layoutX="300.0" layoutY="245.0" text="Movies" />
+      <Label layoutX="300.0" layoutY="263.0" prefHeight="11.0" prefWidth="38.0" text="Playing" />
+      <Label layoutX="300.0" layoutY="276.0" text="Dancing" />
+      <Label layoutX="300.0" layoutY="294.0" text="Singing" />
+      <Label layoutX="300.0" layoutY="312.0" text="Skiing" />
+      <Label layoutX="296.0" layoutY="330.0" text="Travelling" />
+      <ScrollBar layoutX="481.0" layoutY="231.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="14.0" />
    </children>
 </AnchorPane>
