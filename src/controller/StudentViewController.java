@@ -3,6 +3,7 @@ package controller;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollBar;
 import models.StudentCard;
 import models.StudentInterests;
 
@@ -25,6 +26,8 @@ public class StudentViewController implements Initializable {
 
     @FXML
     private ImageView imageView;
+    @FXML
+    private ScrollBar scrollBar;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -33,6 +36,9 @@ public class StudentViewController implements Initializable {
         studentIdLabel.setText("200456178");
         favoriteActivitiesLabel.getLabelFor();
         imageView.getImage();
+        scrollBar.adjustValue(10);
+
+
 
     }
 }

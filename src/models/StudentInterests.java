@@ -20,7 +20,7 @@ public class StudentInterests {
         //arraylist of unchartedInterests are created
         ArrayList<String> unchartedInterests = new ArrayList<>();
         unchartedInterests.addAll(Arrays.asList("riding","movies","travelling"));
-        StudentCard interestsOfStudent = new StudentCard("Harman","Kaur",67868,unchartedInterests);
+        StudentCard interestsOfStudent = new StudentCard("Harman","Kaur",200456178,unchartedInterests);
 
         //now the first name, last name, student id and interests are printed
         System.out.println("First Name:" + interestsOfStudent.getFirstName());
@@ -28,10 +28,6 @@ public class StudentInterests {
         System.out.println("Student ID:" + interestsOfStudent.getStudentId());
         System.out.println("Interests:"  + interestsOfStudent.getInterests());
     }
-
-
-
-
-    }
+}
 
 

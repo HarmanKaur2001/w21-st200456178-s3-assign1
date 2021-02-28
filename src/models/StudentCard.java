@@ -3,10 +3,8 @@ package models;
 import javafx.scene.image.Image;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.InputMismatchException;
-import java.util.List;
+import java.util.*;
+
 /*purpose of the class: to add first name, last name, student id and interests
  *name: harman kaur
  * date:2021-02-09
@@ -39,6 +37,10 @@ public class StudentCard {
     }
 
     public void setFirstName(String firstName) {
+        String s = firstName;
+        String gt= s.substring(0,1).toUpperCase();
+        System.out.println(gt);
+
         if (firstName.length()>=2)
             this.firstName = firstName;
         else
@@ -47,8 +49,8 @@ public class StudentCard {
 
     private void setStudentImage()
     {
-        String filePath = String.format("image/1_of_har.jpg",firstName, lastName , studentId,interests);
-        System.out.println(filePath);
+        String filePath = String.format("image/%s_of_%s.png",firstName, lastName, studentId,interests);
+        //System.out.println(filePath);
         studentImage = new Image(filePath);
     }
 
@@ -57,8 +59,10 @@ public class StudentCard {
     }
 
     public void setLastName(String lastName){
-
-        firstName = firstName.trim();
+        String s = lastName;
+        String gt= s.substring(0,1).toUpperCase();
+        System.out.println(gt);
+        lastName = lastName.trim();
         if (firstName.length() >= 2) {
             this.firstName = firstName;
         }
@@ -68,7 +72,9 @@ public class StudentCard {
 
     public void setStudentId(int studentId){
         //student id is to be validated
-        if (studentId>=10000)
+        int min = 1000000000;
+        int max = 999999999;
+        if (studentId>=min && studentId <=max)
             this.studentId = studentId;
         else
             throw new InputMismatchException(studentId +"has no chars"+ studentId);
