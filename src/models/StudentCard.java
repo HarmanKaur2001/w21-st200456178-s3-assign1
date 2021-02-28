@@ -63,8 +63,8 @@ public class StudentCard {
         String gt= s.substring(0,1).toUpperCase();
         System.out.println(gt);
         lastName = lastName.trim();
-        if (firstName.length() >= 2) {
-            this.firstName = firstName;
+        if (lastName.length() >= 2) {
+            this.lastName = lastName;
         }
             else
             throw new IllegalArgumentException(lastName + "has no rule to use upper case" + lastName);
