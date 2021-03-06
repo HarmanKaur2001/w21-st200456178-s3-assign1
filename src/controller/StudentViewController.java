@@ -2,12 +2,12 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.geometry.Orientation;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
+import javafx.scene.image.ImageView;
 import models.StudentCard;
 import models.StudentInterests;
-
-import javax.swing.text.html.ImageView;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -38,7 +38,7 @@ public class StudentViewController implements Initializable {
         imageView.getImage();
         scrollBar.adjustValue(10);
 
-
-
     }
 }
+
+

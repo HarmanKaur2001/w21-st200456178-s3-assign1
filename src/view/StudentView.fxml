@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="scrollBar" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentViewController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentViewController">
    <children>
       <VBox layoutX="296.0" layoutY="47.0">
          <children>
@@ -55,8 +55,8 @@
       <Label layoutX="300.0" layoutY="294.0" text="Singing" />
       <Label layoutX="300.0" layoutY="312.0" text="Skiing" />
       <Label layoutX="296.0" layoutY="330.0" text="Travelling" />
-      <ScrollBar fx:id="scrollBar" layoutX="481.0" layoutY="231.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="14.0" />
-      <VBox layoutX="255.0" layoutY="36.0" prefHeight="337.0" prefWidth="295.0" />
-      <ImageView fx:id="imageView" fitHeight="370.0" fitWidth="239.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <ScrollBar layoutX="481.0" layoutY="231.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="14.0" />
+      <VBox layoutX="242.0" layoutY="58.0" prefHeight="314.0" prefWidth="295.0" />
+      <ImageView fx:id="imageView" fitHeight="362.0" fitWidth="239.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

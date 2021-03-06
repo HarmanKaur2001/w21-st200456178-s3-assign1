@@ -1,8 +1,7 @@
 package models;
 
-import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /*purpose of the class: to add first name, last name, student id and interests
@@ -18,7 +17,7 @@ public class StudentCard {
     private String lastName;//last name is taken as string
     private int studentId;//studentId is taken as integer
     private ArrayList<String> interests;//interests are taken as array list type string
-    private Image studentImage;
+    private ImageView imageView;
 
     public StudentCard(String firstName, String lastName, int studentId, ArrayList<String> interests)
     {
@@ -26,7 +25,7 @@ public class StudentCard {
         setLastName(lastName);
         setStudentId(studentId);
         setInterests(interests);
-        setStudentImage();
+        setImageView();
     }
 
 
@@ -37,9 +36,9 @@ public class StudentCard {
     }
 
     public void setFirstName(String firstName) {
-        String s = firstName;
-        String gt= s.substring(0,1).toUpperCase();
-        System.out.println(gt);
+        String firstName1= firstName;
+        String conversion= firstName1.substring(0,1).toUpperCase();
+        System.out.println(conversion);
 
         if (firstName.length()>=2)
             this.firstName = firstName;
@@ -47,21 +46,21 @@ public class StudentCard {
             throw new IllegalArgumentException(firstName + "is not valid. chose from these"+ firstName);
     }
 
-    private void setStudentImage()
+    private void setImageView()
     {
         String filePath = String.format("image/%s_of_%s.png",firstName, lastName, studentId,interests);
         //System.out.println(filePath);
-        studentImage = new Image(filePath);
+        imageView = new ImageView(filePath);
     }
 
-    public Image getStudentImage() {
-        return studentImage;
+    public ImageView getImageView() {
+        return imageView ;
     }
 
     public void setLastName(String lastName){
-        String s = lastName;
-        String gt= s.substring(0,1).toUpperCase();
-        System.out.println(gt);
+        String lastName1 = lastName;
+        String conversion= lastName1.substring(0,1).toUpperCase();
+        System.out.println(conversion);
         lastName = lastName.trim();
         if (lastName.length() >= 2) {
             this.lastName = lastName;
