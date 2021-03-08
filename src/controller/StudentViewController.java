@@ -36,7 +36,7 @@ public class StudentViewController implements Initializable {
         studentIdLabel.setText("200456178");
         favoriteActivitiesLabel.getLabelFor();
         imageView.getImage();
-        scrollBar.adjustValue(10);
+        //scrollBar.adjustValue(10);
 
     }
 }
