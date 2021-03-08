@@ -48,7 +48,7 @@ public class StudentCard {
 
     private void setImageView()
     {
-        String filePath = String.format("image/%s_of_%s.png",firstName, lastName, studentId,interests);
+        String filePath = String.format("image/1_of_har.png",firstName, lastName, studentId,interests);
         //System.out.println(filePath);
         imageView = new ImageView(filePath);
     }
