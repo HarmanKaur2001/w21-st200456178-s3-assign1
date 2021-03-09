@@ -49,7 +49,7 @@ public class StudentCard {
 
     private void setStudentImage()
     {
-        String filePath = String.format("image/1_of_har.png",firstName, lastName, studentId,interests);
+        String filePath = String.format("image/harman.jpg",firstName, lastName, studentId,interests);
        // System.out.println(filePath);
         studentImage = new Image(filePath);
     }

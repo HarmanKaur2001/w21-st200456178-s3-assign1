@@ -52,7 +52,10 @@
       <Label layoutX="296.0" layoutY="330.0" text="Travelling" />
       <ScrollBar fx:id="scrollBar" layoutX="481.0" layoutY="231.0" orientation="VERTICAL" prefHeight="117.0" prefWidth="14.0" />
       <VBox layoutX="222.0" layoutY="42.0" prefHeight="314.0" prefWidth="295.0" />
-      <ImageView fx:id="imageView" fitHeight="213.0" fitWidth="246.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="imageView" fitHeight="213.0" fitWidth="246.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/1_of_har.png" />
+         </image></ImageView>
       <Label fx:id="favoriteActivitiesLabel" layoutX="112.0" layoutY="254.0" text="Favorite Activities">
          <font>
             <Font name="System Bold Italic" size="20.0" />
