@@ -1,5 +1,6 @@
 package models;
 
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.util.*;
@@ -17,7 +18,7 @@ public class StudentCard {
     private String lastName;//last name is taken as string
     private int studentId;//studentId is taken as integer
     private ArrayList<String> interests;//interests are taken as array list type string
-    private ImageView imageView;
+    private Image studentImage;
 
     public StudentCard(String firstName, String lastName, int studentId, ArrayList<String> interests)
     {
@@ -25,7 +26,7 @@ public class StudentCard {
         setLastName(lastName);
         setStudentId(studentId);
         setInterests(interests);
-        setImageView();
+        setStudentImage();
     }
 
 
@@ -46,15 +47,15 @@ public class StudentCard {
             throw new IllegalArgumentException(firstName + "is not valid. chose from these"+ firstName);
     }
 
-    private void setImageView()
+    private void setStudentImage()
     {
         String filePath = String.format("image/1_of_har.png",firstName, lastName, studentId,interests);
-        //System.out.println(filePath);
-        imageView = new ImageView(filePath);
+       // System.out.println(filePath);
+        studentImage = new Image(filePath);
     }
 
-    public ImageView getImageView() {
-        return imageView ;
+    public Image getStudentImage() {
+        return studentImage  ;
     }
 
     public void setLastName(String lastName){

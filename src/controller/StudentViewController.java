@@ -2,9 +2,10 @@ package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Orientation;
+
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import models.StudentCard;
 import models.StudentInterests;
@@ -35,8 +36,8 @@ public class StudentViewController implements Initializable {
         lastNameLabel.setText("Kaur");
         studentIdLabel.setText("200456178");
         favoriteActivitiesLabel.getLabelFor();
-        imageView.getImage();
-        //scrollBar.adjustValue(10);
+        imageView.setImage(StudentCard.getStudentImage());
+        scrollBar.adjustValue(10);
 
     }
 }
