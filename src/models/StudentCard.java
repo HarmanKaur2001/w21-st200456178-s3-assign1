@@ -1,7 +1,6 @@
 package models;
 
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 
 import java.util.*;
 
@@ -47,15 +46,16 @@ public class StudentCard {
             throw new IllegalArgumentException(firstName + "is not valid. chose from these"+ firstName);
     }
 
-    private void setStudentImage()
-    {
-        String filePath = String.format("image/harman.jpg",firstName, lastName, studentId,interests);
-       // System.out.println(filePath);
-        studentImage = new Image(filePath);
+    public  Image getStudentImage() {
+        return studentImage;
     }
 
-    public Image getStudentImage() {
-        return studentImage  ;
+    public void setStudentImage() {
+
+        String filePath = "image/harman.jpg";
+//        System.out.println(filePath;
+        studentImage = new Image(filePath);
+
     }
 
     public void setLastName(String lastName){
@@ -72,12 +72,13 @@ public class StudentCard {
 
     public void setStudentId(int studentId){
         //student id is to be validated
-        int min = 1000000000;
+        int min = 100000000;
         int max = 999999999;
+
         if (studentId>=min && studentId <=max)
             this.studentId = studentId;
         else
-            throw new InputMismatchException(studentId +"has no chars"+ studentId);
+            throw new IllegalArgumentException(studentId +"has out of limit"+ studentId);
     }
 
     //getter for the last name
