@@ -1,5 +1,10 @@
 package controller;
-
+/**
+ * purpose of the class: to add first name, last name, student id and interests
+ *name: harman kaur
+ * date:2021-02-09
+ * time:10:30 am
+ */
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;

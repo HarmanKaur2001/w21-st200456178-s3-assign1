@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/*
+/**
  *purpose:to test the student class
  * name:Harman Kaur
  * time:12:00pm

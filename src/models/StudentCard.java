@@ -4,7 +4,8 @@ import javafx.scene.image.Image;
 
 import java.util.*;
 
-/*purpose of the class: to add first name, last name, student id and interests
+/**
+ * purpose of the class: to add first name, last name, student id and interests
  *name: harman kaur
  * date:2021-02-09
  * time:10:30 am
@@ -34,7 +35,7 @@ public class StudentCard {
     {
         return firstName;
     }
-
+    //the first name should at least 2 characters otherwise it throw exceptions
     public void setFirstName(String firstName) {
         String firstName1= firstName;
         String conversion= firstName1.substring(0,1).toUpperCase();
@@ -45,7 +46,7 @@ public class StudentCard {
         else
             throw new IllegalArgumentException(firstName + "is not valid. chose from these"+ firstName);
     }
-
+    //the student image is get
     public  Image getStudentImage() {
         return studentImage;
     }
@@ -70,7 +71,7 @@ public class StudentCard {
             throw new IllegalArgumentException(lastName + "has no rule to use upper case" + lastName);
     }
 
-    //the student is varies from 100000000 to 999999999
+    //the student is varies from 100000000 to 999999999 if the limit is out of 99999999 then the exception is thrown
     public void setStudentId(int studentId){
         //student id is to be validated
         int min = 100000000;
@@ -97,7 +98,7 @@ public class StudentCard {
         return interests;
     }
 
-    //interests are write under array list
+    //interests are write under array list and add some valiadtion
     public void setInterests(ArrayList<String> interests) {
         List<String> validInterests = Arrays.asList("riding","movies","travelling","skiing","dancing","gaming","reading");
         for (int i =0;i<interests.size();i++) {
