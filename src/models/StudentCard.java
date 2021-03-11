@@ -37,8 +37,7 @@ public class StudentCard {
     }
     //the first name should at least 2 characters otherwise it throw exceptions
     public void setFirstName(String firstName) {
-        String firstName1= firstName;
-        String conversion= firstName1.substring(0,1).toUpperCase();
+        String conversion= firstName.substring(0,1).toUpperCase();
         System.out.println(conversion);
 
         if (firstName.length()>=2)
