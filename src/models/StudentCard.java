@@ -35,7 +35,11 @@ public class StudentCard {
     {
         return firstName;
     }
-    //the first name should at least 2 characters otherwise it throw exceptions
+
+    /**
+     * the first name should at least 2 characters otherwise it throw exceptions
+     * @param firstName
+     */
     public void setFirstName(String firstName) {
         String conversion= firstName.substring(0,1).toUpperCase();
         System.out.println(conversion);
@@ -57,7 +61,11 @@ public class StudentCard {
         studentImage = new Image(filePath);
 
     }
-    //the last names should be at least 2 characters otherwise it throw exception
+
+    /**
+     *
+     * the last names should be at least 2 characters otherwise it throw exception
+     */
     public void setLastName(String lastName){
         String lastName1 = lastName;
         String conversion= lastName1.substring(0,1).toUpperCase();
@@ -70,7 +78,10 @@ public class StudentCard {
             throw new IllegalArgumentException(lastName + "has no rule to use upper case" + lastName);
     }
 
-    //the student is varies from 100000000 to 999999999 if the limit is out of 99999999 then the exception is thrown
+    /**
+     * the student is varies from 100000000 to 999999999 if the limit is out of 99999999 then the exception is thrown
+     * @param studentId
+     */
     public void setStudentId(int studentId){
         //student id is to be validated
         int min = 100000000;
@@ -97,7 +108,10 @@ public class StudentCard {
         return interests;
     }
 
-    //interests are write under array list and add some valiadtion
+    /**
+     *  interests are write under array list and add some valiadtion
+     * @param interests
+     */
     public void setInterests(ArrayList<String> interests) {
         List<String> validInterests = Arrays.asList("riding","movies","travelling","skiing","dancing","gaming","reading");
         for (int i =0;i<interests.size();i++) {
