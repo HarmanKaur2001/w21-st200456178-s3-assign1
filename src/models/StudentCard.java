@@ -51,13 +51,13 @@ public class StudentCard {
     }
 
     public void setStudentImage() {
-
+        //image is setted
         String filePath = "image/harman.jpg";
 //        System.out.println(filePath;
         studentImage = new Image(filePath);
 
     }
-
+    //the last names should be at least 2 characters otherwise it throw exception
     public void setLastName(String lastName){
         String lastName1 = lastName;
         String conversion= lastName1.substring(0,1).toUpperCase();
@@ -70,6 +70,7 @@ public class StudentCard {
             throw new IllegalArgumentException(lastName + "has no rule to use upper case" + lastName);
     }
 
+    //the student is varies from 100000000 to 999999999
     public void setStudentId(int studentId){
         //student id is to be validated
         int min = 100000000;

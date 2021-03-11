@@ -27,6 +27,6 @@ public class StudentInterests {
         System.out.println("Student ID:" + interestsOfStudent.getStudentId());
         System.out.println("Interests:"  + interestsOfStudent.getInterests());
     }
-}
+}//end of the class studentInterests
 
 

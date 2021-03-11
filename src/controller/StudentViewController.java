@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.ScrollBar;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -19,6 +18,8 @@ import java.util.ResourceBundle;
 import static javafx.scene.control.SelectionMode.*;
 
 public class StudentViewController implements Initializable {
+
+    //add the fxmls files and view on screen
     @FXML
     private Label firstNameLabel;
 
@@ -29,27 +30,24 @@ public class StudentViewController implements Initializable {
     private Label studentIdLabel;
 
     @FXML
-    private Label favoriteActivitiesLabel;
+    private ImageView imageView;
+
+
 
     @FXML
-    private ImageView imageView;
-    @FXML
-    private ScrollBar scrollBar;
-    @FXML
     private ListView<String> listView;
-    ObservableList<String> list = FXCollections.observableArrayList("Hiking","riding","riding","movies","travelling","skiing","dancing","gaming","reading");
+    ObservableList<String> list = FXCollections.observableArrayList("Hiking","riding","movies","travelling","skiing","dancing","gaming","reading");
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ArrayList<String> unchartedInterests = new ArrayList<>();
-        ListView listViewRef=new ListView();
+
 
         StudentCard studentCard = new StudentCard("Harman", "Kaur", 200456178, unchartedInterests);
         firstNameLabel.setText(studentCard.getFirstName());
         lastNameLabel.setText(studentCard.getLastName());
         studentIdLabel.setText(Integer.toString(studentCard.getStudentId()));
-       // favoriteActivitiesLabel.getLabelFor(studentCard.getInterests());
         imageView.setImage(studentCard.getStudentImage());
         listView.setItems(list);
         listView.getSelectionModel().setSelectionMode(MULTIPLE);
